@@ -31,7 +31,7 @@ import difflib
 
 PAGE_TPL = """<html>
 <head>
-<title>xml highlighter</title>
+<title>xmlpylighter</title>
 <style type="text/css">
     body { font-style: monotype; }
     body h1 { font-size: small; }
@@ -139,7 +139,7 @@ def pretty_print():
 
 def main():
     from optparse import OptionParser
-    cmd_parser = OptionParser(usage="usage: %prog package.module:app")
+    cmd_parser = OptionParser(usage="usage: %prog [host][:port]")
     cmd_options, cmd_args = cmd_parser.parse_args()
     if len(cmd_args) >= 2:
         host, port = (cmd_args[0] or 'localhost'), (cmd_args[1] or 8080)
